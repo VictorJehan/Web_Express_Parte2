@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concessionária - Sistema de Gestão</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🚗 Concessionária — Gestão Completa de Vendas</h1>
+  </header>
+  
+  <main class="grid">
+
+
+    <section class="card">
+      <h2>🚙 Veículos</h2>
+      <div class="form">
+        <input id="v_marca" placeholder="Marca (ex: Toyota)" autocomplete="off">
+        <input id="v_modelo" placeholder="Modelo (ex: Corolla)" autocomplete="off">
+        <input id="v_ano" placeholder="Ano (ex: 2024)" type="number" autocomplete="off">
+        <button id="btnCadVeiculo">Cadastrar Veículo</button>
+      </div>
+      
+      <h3>✅ Disponíveis</h3>
+      <ul id="listaVeiculos">
+        <li><div class="small">Carregando...</div></li>
+      </ul>
+      
+      <h3>❌ Vendidos</h3>
+      <ul id="listaVeiculosVendidos">
+        <li><div class="small">Carregando...</div></li>
+      </ul>
+    </section>
+
+
+    <section class="card">
+      <h2>👥 Clientes</h2>
+      <div class="form">
+        <input id="c_nome" placeholder="Nome completo" autocomplete="off">
+        <input id="c_email" placeholder="Email" type="email" autocomplete="off">
+        <button id="btnCadCliente">Cadastrar Cliente</button>
+      </div>
+      
+      <h3>Lista de Clientes</h3>
+      <ul id="listaClientes">
+        <li><div class="small">Carregando...</div></li>
+      </ul>
+    </section>
+
+
+    <section class="card">
+      <h2>💼 Vendedores</h2>
+      <div class="form">
+        <input id="vd_nome" placeholder="Nome do vendedor" autocomplete="off">
+        <input id="vd_setor" placeholder="Setor (ex: Veículos Novos)" autocomplete="off">
+        <button id="btnCadVendedor">Cadastrar Vendedor</button>
+      </div>
+      
+      <h3>Lista de Vendedores</h3>
+      <ul id="listaVendedores">
+        <li><div class="small">Carregando...</div></li>
+      </ul>
+    </section>
+
+
+    <section class="card">
+      <h2>💰 Registrar Venda</h2>
+      <select id="sel_cliente">
+        <option value="">Selecione um cliente</option>
+      </select>
+      <select id="sel_veiculo">
+        <option value="">Selecione um veículo</option>
+      </select>
+      <select id="sel_vendedor">
+        <option value="">Selecione um vendedor</option>
+      </select>
+      <button id="btnRegistrarVenda">Registrar Venda</button>
+
+      <h3>📋 Histórico de Vendas</h3>
+      <ul id="listaVendas">
+        <li><div class="small">Carregando...</div></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>💳 Financiamentos</h2>
+      <div class="form">
+        <select id="fin_venda">
+          <option value="">Selecione uma venda</option>
+        </select>
+        <input id="fin_valor" placeholder="Valor Total (R$)" type="number" step="0.01" autocomplete="off">
+        <input id="fin_parcelas" placeholder="Número de Parcelas" type="number" autocomplete="off">
+        <input id="fin_taxa" placeholder="Taxa de Juros (%)" type="number" step="0.01" autocomplete="off">
+        <input id="fin_banco" placeholder="Banco (ex: Banco do Brasil)" autocomplete="off">
+        <button id="btnCadFinanciamento">Cadastrar Financiamento</button>
+      </div>
+      
+      <h3>Lista de Financiamentos</h3>
+      <ul id="listaFinanciamentos">
+        <li><div class="small">Carregando...</div></li>
+      </ul>
+    </section>
+
+
+    <section class="card">
+      <h2>🔧 Manutenções</h2>
+      <div class="form">
+        <select id="man_cliente">
+          <option value="">Selecione um cliente</option>
+        </select>
+        <select id="man_veiculo">
+          <option value="">Selecione um veículo vendido</option>
+        </select>
+        <select id="man_tipo">
+          <option value="">Tipo de Manutenção</option>
+          <option value="Preventiva">Preventiva</option>
+          <option value="Corretiva">Corretiva</option>
+          <option value="Revisão">Revisão</option>
+        </select>
+        <input id="man_descricao" placeholder="Descrição do serviço" autocomplete="off">
+        <input id="man_valor" placeholder="Valor (R$)" type="number" step="0.01" autocomplete="off">
+        <button id="btnCadManutencao">Cadastrar Manutenção</button>
+      </div>
+      
+      <h3>Lista de Manutenções</h3>
+      <ul id="listaManutencoes">
+        <li><div class="small">Carregando...</div></li>
+      </ul>
+    </section>
+
+    <!-- SEÇÃO DE TEST DRIVES -->
+    <section class="card">
+      <h2>🏁 Test Drives</h2>
+      <div class="form">
+        <select id="td_cliente">
+          <option value="">Selecione um cliente</option>
+        </select>
+        <select id="td_veiculo">
+          <option value="">Selecione um veículo</option>
+        </select>
+        <select id="td_vendedor">
+          <option value="">Selecione um vendedor</option>
+        </select>
+        <input id="td_data" type="datetime-local" placeholder="Data e Hora">
+        <input id="td_obs" placeholder="Observações (opcional)" autocomplete="off">
+        <button id="btnCadTestDrive">Agendar Test Drive</button>
+      </div>
+      
+      <h3>Agendamentos</h3>
+      <ul id="listaTestDrives">
+        <li><div class="small">Carregando...</div></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
